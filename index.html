@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>forma. — Hand-thrown ceramics</title>
+<link rel="icon" type="png/img" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_d3f3KztSY3I9H_gMMECWfCMCeWeUNz074SUAzi4Gg&s=10">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="alert-box" class="alert-box"></div>
+
+<div class="cart" id="cart">
+    <div class="cart-head">
+        <h3>Your Cart</h3>
+        <button class="cart-close" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-list" id="cart-list"></div>
+    <div class="cart-foot">
+        <button class="checkout">Proceed to Checkout</button>
+    </div>
+</div>
+
+<div class="bar">Free shipping on orders over $100</div>
+
+<div class="head">
+    <div class="nav">
+        <a href="#shop">Shop</a>
+        <a href="#about">Story</a>
+    </div>
+    <div class="logo">forma.</div>
+    <div class="nav">
+        <a href="#contact">Contact</a>
+        <button class="bag-btn" id="open-cart">Bag (<span id="cart-count">0</span>)</button>
+    </div>
+</div>
+
+<div class="top fade">
+    <div class="top-text">
+        <h1>A little pause.<br><span>A lovely cup.</span></h1>
+        <p>Functional drinkware made in Portugal for everyday use.</p>
+        <a href="#shop" class="btn">Shop the collection</a>
+    </div>
+    <div class="top-pic">
+        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80" alt="Ceramics">
+    </div>
+</div>
+
+<div class="story fade" id="about">
+    <h2>Designed for slowing down.</h2>
+    <p>At forma, we create ceramics that blend minimalist beauty with everyday utility. Each item is handcrafted by expert Portuguese artisans using traditional small-batch production techniques passed down through generations.</p>
+</div>
+
+<div class="shop fade" id="shop">
+    <h2 class="title">Everyday Objects</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&q=80" alt="Espresso">
+            <h3>Espresso Mug</h3>
+            <p>$28.00</p>
+            <button onclick="addCart('Espresso Mug', 28)">Add to cart</button>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTz_D0Ee4gUI8HefC_ob4A1XHpZN-ap-DlzHuqDw6rIw&s=10" alt="Teapot">
+            <h3>Minimalist Teapot</h3>
+            <p>$65.00</p>
+            <button onclick="addCart('Minimalist Teapot', 65)">Add to cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=500&q=80" alt="Pour Over">
+            <h3>Artisan Pour-Over</h3>
+            <p>$54.00</p>
+            <button onclick="addCart('Artisan Pour-Over', 54)">Add to cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=500&q=80" alt="Tray">
+            <h3>Stoneware Tray</h3>
+            <p>$78.00</p>
+            <button onclick="addCart('Stoneware Tray', 78)">Add to cart</button>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=500&q=80" alt="Vase">
+            <h3>Matte Finish Vase</h3>
+            <p>$88.00</p>
+            <button onclick="addCart('Matte Finish Vase', 88)">Add to cart</button>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo2QQOcOM7FSMkHjG6yPPEJslR0BiUlzvdSEmQ4umS0Q&s=10" alt="Plate">
+            <h3>Dinner Plate</h3>
+            <p>$35.00</p>
+            <button onclick="addCart('Dinner Plate', 35)">Add to cart</button>
+        </div>
+    </div>
+</div>
+
+<div class="mats fade">
+    <h2 class="title">Materials</h2>
+    <div class="mat-grid">
+        <div class="mat-box">
+            <span>01 / CLAY</span>
+            <h4>Portuguese Stoneware</h4>
+            <p>Formed from rich natural deposits, offering unmatched tactile warmth and long-term durability.</p>
+        </div>
+        <div class="mat-box">
+            <span>02 / GLAZE</span>
+            <h4>Non-Toxic Pigments</h4>
+            <p>Formulated in-house using organic earth minerals, yielding muted natural tones.</p>
+        </div>
+        <div class="mat-box">
+            <span>03 / FIRE</span>
+            <h4>High-Temp Kiln</h4>
+            <p>Fired twice at over 1,250°C to vitrify the stoneware, making every piece food-safe.</p>
+        </div>
+    </div>
+</div>
+
+<div class="work fade">
+    <h2 class="title">The Process</h2>
+    <div class="step-wrap">
+        <div class="step">
+            <h4>Hand Throwing</h4>
+            <p>Raw clay is balanced and shaped on the wheel.</p>
+        </div>
+        <div class="step">
+            <h4>Air Drying</h4>
+            <p>Pieces rest for days in climate-controlled rooms.</p>
+        </div>
+        <div class="step">
+            <h4>Dip Glazing</h4>
+            <p>Vessels are hand-dipped in custom mineral glazes.</p>
+        </div>
+        <div class="step">
+            <h4>Final Firing</h4>
+            <p>Intense heat locks the glaze into a resilient finish.</p>
+        </div>
+    </div>
+</div>
+
+<div class="revs fade">
+    <h2 class="title">Community</h2>
+    <div class="rev-grid" id="rev-grid">
+        <div class="rev-box">
+            <p>"The weight and texture are absolute perfection."</p>
+            <div class="user">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Elena">
+                <div>
+                    <h5>Elena R.</h5>
+                    <span>Verified Buyer</span>
+                </div>
+            </div>
+        </div>
+        <div class="rev-box">
+            <p>"Stunning craftsmanship. You feel the history."</p>
+            <div class="user">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH-HH0epccUfC44p9cmO8tVues0FK4x9Ov5oupNmR-4w&s=10" alt="Marcus">
+                <div>
+                    <h5>Marcus T.</h5>
+                    <span>Verified Buyer</span>
+                </div>
+            </div>
+        </div>
+        <div class="rev-box">
+            <p>"Minimalist, functional, and durable."</p>
+            <div class="user">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-WEfVTuUwvWOXeEcjJslGziZBR3o_kHgOweqHFGjyLQ&s=10" alt="Sarah">
+                <div>
+                    <h5>Sarah K.</h5>
+                    <span>Verified Buyer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" id="load-revs">View all reviews</button>
+</div>
+
+<div class="faq fade">
+    <h2 class="title">FAQ</h2>
+    <div class="faq-wrap">
+        <div class="faq-left">
+            <div class="faq-q active" onclick="showFaq(0, this)">Are they dishwasher safe?</div>
+            <div class="faq-q" onclick="showFaq(1, this)">How are fragile orders packaged?</div>
+            <div class="faq-q" onclick="showFaq(2, this)">Do you offer international shipping?</div>
+            <div class="faq-q" onclick="showFaq(3, this)">Can I microwave these?</div>
+        </div>
+        <div class="faq-right" id="faq-ans">
+            <h4>Are they dishwasher safe?</h4>
+            <p>Yes, all forma stoneware pieces are fired at high temperatures making them highly durable and entirely safe for everyday dishwasher cleaning.</p>
+        </div>
+    </div>
+</div>
+
+<div class="drop fade">
+    <div class="drop-text">
+        <h2>Autumn Drop</h2>
+        <p>Introducing our limited palette inspired by autumn shadows and weathered river rocks. Hand-numbered batches available now.</p>
+        <button class="btn" style="background:#FFF;color:#31302B;">Shop The Drop</button>
+    </div>
+    <div class="drop-pic">
+        <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80" alt="Drop">
+    </div>
+</div>
+
+<div class="sus fade">
+    <h2>Earth Guarantee</h2>
+    <p>We pack every shipment using 100% plastic-free, biodegradable, and recycled paper buffers. Our workshop operates on zero-waste clay reclamation principles.</p>
+</div>
+
+<div class="contact fade" id="contact">
+    <h2 class="title">Get in Touch</h2>
+    <form class="form" id="form">
+        <input type="text" id="fname" placeholder="Name">
+        <input type="email" id="femail" placeholder="Email">
+        <textarea id="fmsg" placeholder="Message"></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</div>
+
+<div class="foot fade">
+    <div class="foot-top">
+        <div class="foot-left">
+            <h3>Functional ceramics.<br>Made in Portugal.</h3>
+            <p>hello@formaceramics.com</p>
+        </div>
+        <div class="foot-cols">
+            <div class="foot-col">
+                <h5>Shop</h5>
+                <a href="#">All ceramics</a>
+                <a href="#">Cups</a>
+                <a href="#">Sets</a>
+            </div>
+            <div class="foot-col">
+                <h5>Studio</h5>
+                <a href="#">Story</a>
+                <a href="#">Process</a>
+                <a href="#">Journal</a>
+            </div>
+            <div class="foot-col">
+                <h5>Help</h5>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </div>
+    <div class="brand">forma.</div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
